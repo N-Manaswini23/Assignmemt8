@@ -148,14 +148,16 @@ Let $X$ and $Y$ be independent random variables each following a uniform distrib
 \end{enumerate}
 
 \section*{ANSWER}
-Option $2$ and $4$ are correct.
+Options $2$ and $4$ are correct.
 
 \section*{SOLUTION}
+
 Given $X$ and $Y$ be two independent random\\
 variables. \\
 Given $W=XI_{\{Y\leq X^2\}}$ \\
 $X \in \brak{0,1}$ , $Y \in \brak{0,1}$ , $W \in [0,1)$\\
-The PDF for $X$ is
+\begin{enumerate}
+\item The PDF for $X$ is
 \begin{align}
 p_X(x) = 
 \begin{cases}
@@ -163,7 +165,7 @@ p_X(x) =
      0 & otherwise 
 \end{cases}\label{1}
 \end{align}
-The CDF for $X$ is
+\item The CDF for $X$ is
 \begin{align}
 F_{X}(x)  = 
 \begin{cases}
@@ -172,7 +174,7 @@ F_{X}(x)  =
       1 & otherwise
 \end{cases}  \label{eq:2}
 \end{align}
-The PDF for $Y$ is
+\item The PDF for $Y$ is
 \begin{align}
 p_{Y}(y)  = 
 \begin{cases}
@@ -180,7 +182,7 @@ p_{Y}(y)  =
       0 & otherwise 
 \end{cases} \label{3}
 \end{align}
-The CDF for $Y$ is
+\item The CDF for $Y$ is
 \begin{align}
 F_{Y}(y)  = 
 \begin{cases}
@@ -189,7 +191,7 @@ F_{Y}(y)  =
       1 & otherwise 
 \end{cases}\label{4}
 \end{align}
-$I_{\{Y\leq X^2\}}$ is defined as follows
+\item $I_{\{Y\leq X^2\}}$ is defined as follows
 \begin{align} 
 I_{\{Y\leq X^2\}} =
 \begin{cases}
@@ -197,7 +199,7 @@ I_{\{Y\leq X^2\}} =
     0 & otherwise 
 \end{cases} \label{5}
 \end{align}
-$W$ is defined as follows
+\item $W$ is defined as follows
 \begin{align}
 W  = 
 \begin{cases}
@@ -210,13 +212,13 @@ From \eqref{6}
 p_W(W=0) &= \Pr(I_{\{Y\leq X^2\}}=0) \\
          &=\Pr(x^2 <y) \label{7}
 \end{align}
-Let $Z=X^2-Y$ be a random variable where $Z \in \brak{-1,1}$
+\item Let $Z=X^2-Y$ be a random variable where $Z \in \brak{-1,1}$
 \begin{align}
 F_{X^2}(u)&=\Pr(X^2 \leq u) \\
           &=\Pr(X \leq \sqrt{u}) \\
           &=F_X(\sqrt{u}) \label{8}
 \end{align}
-From \eqref{eq:2},The CDF for $X^2$ is
+\item From \eqref{eq:2},The CDF for $X^2$ is
 \begin{align}
 F_{X^2}(u)  = 
 \begin{cases}
@@ -225,7 +227,7 @@ F_{X^2}(u)  =
       1 & otherwise
 \end{cases} \label{9}
 \end{align}
-The PDF for $X^2$ is
+\item The PDF for $X^2$ is
 \begin{align}
 p_{X^2}(u)  = 
 \begin{cases}
@@ -238,7 +240,7 @@ F_{\{-Y\}}(v)&=\Pr(-Y \leq v) \\
           &=\Pr(Y \geq -v) \\
           &=1-F_Y(-v) \label{11}
 \end{align}
-From \eqref{4},The CDF for $(-Y)$ is
+\item From \eqref{4},The CDF for $(-Y)$ is
 \begin{align}
 F_{\{-Y\}}(v)  = 
 \begin{cases}
@@ -247,7 +249,7 @@ F_{\{-Y\}}(v)  =
       1 & otherwise 
 \end{cases}\label{12}
 \end{align}
-The PDF for $(-Y)$ is
+\item The PDF for $(-Y)$ is
 \begin{align}
 p_{\{-Y\}}(v)  = 
 \begin{cases}
@@ -255,7 +257,7 @@ p_{\{-Y\}}(v)  =
       0 & otherwise
 \end{cases} \label{p-y}
 \end{align}
-$Z=X^2-Y$ $\implies  z=u+v$\\
+\item $Z=X^2-Y$ $\implies  z=u+v$\\
 Using convolution
 \begin{align}
 p_Z(z)=\int_{- \infty}^{\infty} p_{X^2}(z-v)p_{\{-Y\}}(v) \mathrm{dv} \label{pz}
@@ -269,7 +271,7 @@ p_{Z}(z)  =
       0 & otherwise 
 \end{cases} \label{13}
 \end{align}
-CDF of $Z$ as follows
+\item CDF of $Z$ as follows
 \begin{align}
 F_{Z}(z)  = 
 \begin{cases}
@@ -278,14 +280,14 @@ F_{Z}(z)  =
       1 & otherwise
 \end{cases} \label{14}
 \end{align}
-using \eqref{14} to find $p_W(W=0)$
+\item using \eqref{14} to find $p_W(W=0)$
 \begin{align}
 p_W(W=0) &=\Pr(x^2 <y) \\
          &=F_z(0) \\
          &=\frac{2}{3} \label{15}
 \end{align}
 
-$W=t \implies X=t $ where $t \in (0,1)$
+\item $W=t \implies X=t $ where $t \in (0,1)$
 \begin{align}
 p_{W}(t) = \int_{- \infty}^{\infty} p_X(t)I_{\{y\leq t^2\}} \mathrm{dy}
 \end{align}
@@ -298,7 +300,7 @@ For $ 0 < t < 1 $,
 p_W(t) &= \int_{0}^{t^2} p_X(t)I_{\{y\leq t^2\}} \mathrm{dy} \\
        &= t^2 \label{18}
 \end{align}
-$\therefore$ PDF of $W$ is as follows
+\item $\therefore$ PDF of $W$ is as follows
 \begin{align}
 p_{W}(t)  = 
 \begin{cases}
@@ -307,7 +309,7 @@ p_{W}(t)  =
   0 & otherwise
 \end{cases} \label{19}
 \end{align}
-The CDF  of $W$ is as follows:
+\item The CDF  of $W$ is as follows:
 \begin{align}
 F_W(t)  = 
 \begin{cases}
@@ -316,8 +318,8 @@ F_W(t)  =
   1 & otherwise
 \end{cases} \label{20}
 \end{align}
-CDF of $W$ is discontinuous at $W=0$.\\
-The CDF above can be written as
+\item CDF of $W$ is discontinuous at $W=0$.\\
+\item The CDF above can be written as
 \begin{align}
   F_W(t)=\brak{\frac{2+t^3}{3}}I_{\{0\leq t \leq 1\}}+ I_{\{t > 1\}}
 \end{align}
@@ -338,5 +340,5 @@ $\therefore$ option $2$ and $4$ are correct.
 \includegraphics[width=\columnwidth]{assignment8cdf.png}
 \end{center}
 \end{figure}
-
+\end{enumerate}
 \end{document}
